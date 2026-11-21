@@ -174,7 +174,8 @@ namespace PedidosOnlineWeb
         {
             try
             {
-                decimal precio = decimal.Parse(txtPrecio.Text.Trim(), NumberStyles.Any, CultureInfo.InvariantCulture);
+                string precioTexto = txtPrecio.Text.Trim().Replace(',', '.');
+                decimal precio = decimal.Parse(precioTexto, NumberStyles.Any, CultureInfo.InvariantCulture);
 
                 using (SqlConnection conn = new SqlConnection(ConnStr))
                 using (SqlCommand cmd = new SqlCommand("dbo.sp_GuardarProducto", conn))
@@ -182,8 +183,8 @@ namespace PedidosOnlineWeb
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@ProductoID", SqlDbType.Int).Value = int.Parse(hfProductoID.Value);
                     cmd.Parameters.Add("@CategoriaID", SqlDbType.Int).Value = int.Parse(ddlCategorias.SelectedValue);
-                    cmd.Parameters.Add("@SKU", SqlDbType.VarChar, 30).Value = txtSKU.Text.Trim();
-                    cmd.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 150).Value = txtNombreProducto.Text.Trim();
+                    cmd.Parameters.Add("@SKU", SqlDbType.VarChar, 30).Value = Server.HtmlDecode(txtSKU.Text).Trim();
+                    cmd.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 150).Value = Server.HtmlDecode(txtNombreProducto.Text).Trim();
                     cmd.Parameters.Add("@PrecioUnitario", SqlDbType.Decimal).Value = precio;
                     cmd.Parameters.Add("@Stock", SqlDbType.Int).Value = int.Parse(txtStock.Text.Trim());
 
@@ -207,10 +208,30 @@ namespace PedidosOnlineWeb
         {
             GridViewRow row = gvProductos.SelectedRow;
             hfProductoID.Value = gvProductos.DataKeys[row.RowIndex].Value.ToString();
-            txtSKU.Text = row.Cells[1].Text;
-            txtNombreProducto.Text = row.Cells[2].Text;
-            txtPrecio.Text = decimal.Parse(row.Cells[4].Text, NumberStyles.Currency).ToString(CultureInfo.InvariantCulture);
-            txtStock.Text = row.Cells[5].Text;
+
+            txtSKU.Text = Server.HtmlDecode(row.Cells[1].Text).Trim();
+            txtNombreProducto.Text = Server.HtmlDecode(row.Cells[2].Text).Trim();
+
+            string nombreCategoria = Server.HtmlDecode(row.Cells[3].Text).Trim();
+            ListItem itemCat = ddlCategorias.Items.FindByText(nombreCategoria);
+            if (itemCat != null)
+            {
+                ddlCategorias.ClearSelection();
+                itemCat.Selected = true;
+            }
+
+            string precioTexto = Server.HtmlDecode(row.Cells[4].Text).Trim();
+            if (decimal.TryParse(precioTexto, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal precioVal) ||
+                decimal.TryParse(precioTexto, NumberStyles.Any, CultureInfo.InvariantCulture, out precioVal))
+            {
+                txtPrecio.Text = precioVal.ToString("0.00", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                txtPrecio.Text = precioTexto;
+            }
+
+            txtStock.Text = Server.HtmlDecode(row.Cells[5].Text).Trim();
         }
 
         protected void gvProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -252,6 +273,10 @@ namespace PedidosOnlineWeb
             txtNombreProducto.Text = string.Empty;
             txtPrecio.Text = string.Empty;
             txtStock.Text = string.Empty;
+            if (ddlCategorias.Items.Count > 0)
+            {
+                ddlCategorias.SelectedIndex = 0;
+            }
         }
     }
 }

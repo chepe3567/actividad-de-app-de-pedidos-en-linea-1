@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|solutionrelative:default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|solutionrelative:default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\default.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|solutionrelative:default.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{669EAC5D-FDDD-422B-BE8C-7E458C28FBF2}|PedidosOnlineWeb.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Default.aspx.designer.cs",
               "DocumentMoniker": "C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\Default.aspx.designer.cs",
               "RelativeDocumentMoniker": "Default.aspx.designer.cs",
@@ -43,13 +43,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\Default.aspx.cs",
               "RelativeDocumentMoniker": "Default.aspx.cs",
               "ToolTip": "C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\Default.aspx.cs",
               "RelativeToolTip": "Default.aspx.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAmwAABAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAmwBkBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-19T22:34:32.976Z",
               "OwnerCaption": "%2"
@@ -70,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\Web.config",
               "RelativeDocumentMoniker": "Web.config",
               "ToolTip": "C:\\Users\\melvi\\OneDrive\\Desktop\\PedidosOnline-SQLServer\\app\\PedidosOnlineWeb\\Web.config",
               "RelativeToolTip": "Web.config",
-              "ViewState": "AgIAABUAAAAApDGLx5UewDEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2026-11-19T22:32:23.322Z",
               "EditorCaption": "",
